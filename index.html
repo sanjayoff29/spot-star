@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SPOT-STAR</title>
+    <link rel="icon" href="../img/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <style>
+    body {
+      background-image: url(../img/logo.png);
+      background-repeat: no-repeat;
+      background-color: black;
+      background-size: 150px 150px;
+      background-attachment: fixed;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Mobile-first */
+    .form {
+      margin: 50px 20px;
+      background-color: white;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .box {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    input {
+      border-radius: 20px;
+      width: 100%;
+      height: 35px;
+      margin-bottom: 20px;
+      padding-left: 10px;
+    }
+
+    #signin,
+    #signup {
+      width: 100px;
+      height: 40px;
+      border-radius: 20px;
+      font-weight: 700;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    #forgetpassword {
+      text-decoration: none;
+      color: black;
+      font-weight: 700;
+    }
+
+    a:hover {
+      color: green;
+    }
+
+    a:active {
+      color: red;
+    }
+
+    #logoimg {
+      width: 50px;
+      height: 50px;
+    }
+
+    /* Larger screens */
+    @media (min-width: 768px) {
+      .form {
+        margin: 100px auto;
+        width: 50%;
+      }
+
+      .box {
+        padding: 4rem;
+      }
+
+      input {
+        width: 80%;
+      }
+
+      #signin,
+      #signup {
+        width: 120px;
+      }
+    }
+
+    /* For desktops */
+    @media (min-width: 1200px) {
+      .form {
+        margin: 150px auto;
+        width: 40%;
+      }
+
+      .box {
+        padding: 6rem;
+      }
+    }
+    
+  </style>
+  <body>
+    <div class="form">
+      <div class="box">
+        <img src="../img/logo.png" alt="logopic" id="logoimg" />
+        <h1>Login to Your Account</h1>
+        <span><b>Stay in the Loop.</b></span><br />
+        <input type="text" id="Email" placeholder="Email or Phone" style="margin-top: 20px;" /><br />
+        <input type="password" placeholder="password" /><br />
+        <a href="../Home/forget.html" id="forgetpassword">Forget password?</a
+        ><br /><br />
+        <a href="../Home/Home.html">
+          <button id="signin">Login</button></a
+        ><br /><br />
+        <label for="signup">New User?</label><br />
+        <a href="../Home/SignUp.html" id="newuser"
+          ><button id="signup">Sign Up</button></a
+        >
+      </div>
+    </div>
+    <script>
+    document.getElementById("signin").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default anchor behavior
+    const emailOrPhone = document.getElementById("Email").value;
+    const password = document.querySelector("input[type='password']").value;
+
+    // Retrieve stored email and password
+    const storedEmail = localStorage.getItem("signupEmail");
+    const storedPassword = localStorage.getItem("signupPassword");
+
+    if (emailOrPhone === "" || password === "") {
+        alert("Please fill in all fields.");
+        return;
+    }
+
+    // Check if email and password match
+    if (emailOrPhone === storedEmail && password === storedPassword) {
+        alert("Logged in successfully!");
+        window.location.href = "../Home/Home.html"; // Redirect to home page
+    } else {
+        alert("Invalid email or password. Please try again.");
+    }
+});
+
+
+    </script>
+  </body>
+</html>

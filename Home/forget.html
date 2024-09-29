@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../img/logo.png" />
+    <title>Forgot Password</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <style>
+    body {
+      background-image: url(../img/logo.png);
+      background-repeat: no-repeat;
+      background-color: black;
+      background-size: 150px 150px;
+      background-attachment: fixed;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Mobile-first styling */
+    .box {
+      background-color: whitesmoke;
+      width: 90%;
+      max-width: 400px;
+      margin: 100px auto;
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+      margin-top: 200px;
+    }
+
+    input {
+      border-radius: 20px;
+      width: 90%;
+      height: 30px;
+      margin: 20px 0;
+      padding-left: 10px;
+    }
+    a{
+        text-decoration: none;
+    }
+
+    button {
+      width: 120px;
+      height: 40px;
+      border-radius: 20px;
+      margin: 10px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    button:hover {
+      color: green;
+    }
+
+    button:active {
+      color: red;
+    }
+
+    #sendotp,
+    #cancel {
+      display: block;
+      width: 100%;
+      max-width: 120px;
+      margin: 10px auto;
+    }
+
+    h2 {
+      padding-bottom: 10px;
+    }
+
+    /* Larger screens */
+    @media (min-width: 768px) {
+      .box {
+        width: 60%;
+        max-width: 500px;
+        padding: 40px;
+      }
+
+      input {
+        width: 80%;
+      }
+
+      button {
+        width: 140px;
+      }
+    }
+
+    /* For desktops */
+    @media (min-width: 1200px) {
+      .box {
+        width: 40%;
+      }
+
+      input {
+        width: 70%;
+      }
+    }
+  </style>
+  <body>
+    <div class="box">
+      <h2>Forgot Password?</h2>
+      <label for="Forgotpass">Email or Phone</label><br />
+      <input type="text" name="password" id="Forgotpass" /><br /><br />
+      <a href="../Home/otp.html"><button id="sendotp">SEND OTP</button></a>
+      <a href="../index.html"><button id="cancel">Cancel</button></a>
+    </div>
+  <script>
+    document.getElementById("sendotp").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default anchor behavior
+    const forgotPassInput = document.getElementById("Forgotpass").value;
+
+    if (forgotPassInput === "") {
+        alert("Please enter your email or phone number.");
+        return;
+    }
+
+    // Generate a random 6-digit OTP
+    const otp = Math.floor(100000 + Math.random() * 900000); // OTP between 100000 and 999999
+    localStorage.setItem("generatedOTP", otp); // Store OTP in localStorage
+
+    alert(`Your OTP is: ${otp}`); // Show OTP in alert (for testing purposes)
+    window.location.href = "../Home/otp.html"; // Redirect to OTP page
+});
+
+  </script>
+  </body>
+
+</html>

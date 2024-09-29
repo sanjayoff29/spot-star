@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../img/logo.png" />
+
+    <title>Sign up</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      font-family: "Times New Roman", Times, serif;
+    }
+    body {
+      background-image: url(../img/logo.png);
+      background-repeat: no-repeat;
+      background-color: black;
+      background-size: 200px 200px;
+      background-attachment: fixed;
+    }
+    button:hover {
+      color: brown;
+    }
+    button:active {
+      color: green;
+    }
+    button {
+      color: black;
+      margin-left: 100px;
+      width: 70px;
+      height: 30px;
+      border-radius: 30px;
+      margin-top: 0px;
+    }
+    div {
+      background-color: whitesmoke;
+      margin: 150px 600px 50px 600px; /* top right bottom left*/
+      padding-top: 20px;
+      padding-left: 20px;
+      padding-bottom: 20px;
+      border-radius: 30px;
+      width: 300px;
+    }
+  
+
+    h1 {
+      margin-left: 90px;
+      padding-bottom: 30px;
+    }
+    #name,
+    #age,
+    #email,
+    #phonenumber ,
+    #password{
+      margin-bottom: 20px;
+      width: 200px;
+      height: 30px;
+      border-radius: 30px;
+      margin-left: 30px;
+      padding-left: 10px;
+    }
+    #term {
+      padding: 10px;
+      margin-left: 20px;
+    }
+    a {
+      text-decoration: none;
+    }
+   
+  </style>
+  <body>
+    <div id="signupdiv">
+      <h1>Sign Up</h1>
+
+      <input
+        type="text"
+        name="name"
+        id="name"
+        margin-bottom:
+        20px;
+        required
+        placeholder="Full Name"
+      /><br />
+
+      <input
+        type="text"
+        name="phonenumber"
+        placeholder="Phone Number"
+        id="phonenumber"
+        required
+      />
+      <br />
+
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Email"
+        required
+      /><br />
+
+      <input
+        type="text"
+        name="age"
+        id="age"
+        required
+        placeholder="Age "
+      /><br />
+      <input
+        type="text"
+        name="password"
+        id="password"
+        required
+        placeholder="set a password "
+      /><br />
+      <input
+        type="checkbox"
+        required
+        id="term"
+        name="terms and conditions"
+        
+      />
+      <a href="../Home/term.html" id="conditions">Terms & Conditions</a><br />
+
+      <a href="../Home/Home.html"><button>Submit</button></a>
+    </div>
+   
+<script>
+ document.querySelector("button").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default anchor behavior
+    const name = document.getElementById("name").value;
+    const phoneNumber = document.getElementById("phonenumber").value;
+    const email = document.getElementById("email").value;
+    const age = document.getElementById("age").value;
+    const password = document.getElementById("password").value;
+    const terms = document.getElementById("term").checked;
+
+    if (name === "" || phoneNumber === "" || email === "" || age === "" || password === "") {
+        alert("Please fill in all fields.");
+        return;
+    }
+
+    if (!terms) {
+        alert("You must accept the terms and conditions.");
+        return;
+    }
+
+    // Store email and password in localStorage
+    localStorage.setItem("signupEmail", email);
+    localStorage.setItem("signupPassword", password);
+
+    // Simulate sign up success
+    alert("Sign up successful!");
+    window.location.href = "../Home/Home.html"; // Redirect to home page
+});
+
+
+</script>
+
+  </body>
+</html>

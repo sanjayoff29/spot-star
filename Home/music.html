@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../img/logo.png" />
+
+    <title> Musics</title>
+  </head>
+  <style>
+    body {
+      background-image: url(../img/logo.png);
+      background-repeat: no-repeat;
+      background-color: black;
+      background-size: 100px 100px;
+      
+    }
+    * {
+      padding: 0px;
+      margin: 0px;
+      color: whitesmoke;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    a {
+      text-decoration: none;
+    }
+    img {
+      width: 250px;
+      height: 250px;
+    }
+    h1 {
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    h1:hover {
+      color: brown;
+       font-family: 'Times New Roman', Times, serif;
+    }
+    #a1,
+    #a2,
+    #a3,
+    #a4,
+    #a5 {
+      padding-bottom: 50px;
+      padding-left: 30px;
+      padding-top: 30px;
+      margin-left: 150px;
+      font-size: 20px;
+    }
+    div {
+      padding-bottom: 50px;
+      padding-left: 50px;
+    }
+    a:hover {
+      color: brown;
+      text-decoration: underline;
+      text-decoration-color: brown;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    img {
+      padding-left: 30px;
+    }
+    img:hover {
+      width: 265px;
+      height: 265px;
+      
+    }
+    h2 {
+      padding-bottom: 40px;
+    }
+    h2:hover {
+      color: brown;
+       font-family: 'Times New Roman', Times, serif;
+    }
+    
+  </style>
+  <body>
+   
+    
+    <div id="top">
+         <h1>Music</h1>
+      
+      <a href="#actor" id="a1">Actor</a>
+      <a href="#actress" id="a2">Actress</a>
+      <a href="#MusicDirector" id="a3">MusicDirector</a>
+      <a href="#playbacksinger" id="a4">PlayBackSinger</a>
+      <a href="#lyricist" id="a5">Lyricist</a>
+    </div>
+    <div>
+      <h2 id="actor">Actor</h2>
+      <a href="../music/musicdhanush.html"><img src="../img/actor/dhanush.jpg" alt="" /></a>
+      <a href="../music/musicvijay.html"><img src="../img/actor/vijay.jpg" alt="" /></a>
+      <a href="../music/musicajith.html"><img src="../img/actor/ajith.jpg" alt="" /></a>
+      <a href="../music/musicsurya.html"><img src="../img/actor/surya.jpg" alt="" /></a>
+      <a href="../music/musicvijaysethupathy.html"><img src="../img/actor/vijaysethupathy.jpg" alt="" /></a>
+    </div>
+    <div>
+        <h2 id="actress">Actress</h2>
+        <a href="../music/musicsamantha.html"><img src="../img/Actress/sam.jpg" alt=""></a>
+        <a href="../music/musicmegaakash.html"><img src="../img/Actress/mega akash.jpg" alt=""></a>
+        <a href="../music/musictrisha.html"><img src="../img/Actress/trisha.jpg" alt=""></a>
+        <a href="../music/musicnayanthara.html"><img src="../img/Actress/nayanthara.jpg" alt=""></a>
+        <a href="../music/musicshriya.html"><img src="../img/Actress/shriya.jpg" alt=""></a>
+       
+    </div>
+    <div>
+      <h2 id="MusicDirector">Music Director</h2>
+      <a href="../music/musicarr.html"><img src="../img/music/arr.jpg" alt="" /></a>
+      <a href="../music/musicadhi.html"><img src="../img/music/aadhi.jpg" alt="" /></a>
+      <a href="../music/musicshakthisree.html"><img src="../img/music/shakthisree.jpg" alt="" /></a>
+      <a href="../music/musicpradeep.html"><img src="../img/music/pradeep.jpg" alt="" /></a>
+      <a href="../music/musicantony.html"> <img src="../img/music/vijay antony.jpg" alt="" /></a>
+    </div>
+    <div>
+      <h2 id="playbacksinger">Play Back Singer</h2>
+      <a href="../music/musicu1.html"><img src="../img/play singer/U1.jpeg" alt="" /></a>
+      <a href="../music/musicanirudh.html"><img src="../img/play singer/anirudh.jpg" alt="" /></a>
+      <a href="../music/musicharris.html"><img src="../img/play singer/harris.jpg" alt="" /></a>
+      <a href="../music/musicteejay.html"><img src="../img/play singer/teejay.jpg" alt="" /></a>
+      <a href="../music/musicgvprakash.html"><img src="../img/play singer/Gv prakash.jpg" alt="" /></a>
+    </div>
+    <div>
+      <h2 id="lyricist">Lyricist</h2>
+      <a href="../music/musicstr.html"><img src="../img/lyricist/str.jpg" alt="" /></a>
+      <a href="../music/musicnamuthukumar.html"><img src="../img/lyricist/na.muthu.jpg" alt="" /></a>
+      <a href="../music/musicillayaraja.html"> <img src="../img/lyricist/illaiyaraja.jpg" alt="" /></a>
+      <a href="../music/musicVairamuthu.html"><img src="../img/lyricist/vairamuthu.jpg" alt="" /></a>
+      <a href="../music/musicdeva.html"><img src="../img/lyricist/deva.jpg" alt="" /></a>
+    </div>
+    <script>
+      // Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+    </script>
+  </body>
+</html>

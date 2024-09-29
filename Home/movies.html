@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="../img/logo.png" />
+
+    <title>Movies</title>
+  </head>
+  <style>
+    body {
+      background-image: url(../img/logo.png);
+      background-repeat: no-repeat;
+      background-color: black;
+      background-size: 100px 100px;
+     
+    }
+   * {
+      padding: 0px;
+      margin: 0px;
+      color: whitesmoke;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   }
+    div {
+      padding-bottom: 50px;
+      padding-left: 50px;
+    }
+    img {
+      width: 250px;
+      height: 250px;
+    }
+    h1 {
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    img:hover{
+      width: 265px;
+      height: 265px;
+    }
+     h1:hover {
+      color: brown;
+       font-family: 'Times New Roman', Times, serif;
+    }
+    h2 {
+      padding-bottom: 40px;
+    }
+    h2:hover {
+      color: brown;
+       font-family: 'Times New Roman', Times, serif;
+    }
+    
+    img{
+      padding-left: 30px;
+    }
+    #actor{
+      padding-left: 20px;
+      padding-top: 25px;
+    }
+    #actress{
+      padding-left: 20px;
+      padding-top: 25px;
+     
+    }
+    #Directors{
+      padding-left: 20px;
+      padding-top: 25px;
+     
+    }
+     #a1,#a2,#a3,#a4{
+       padding-bottom: 50px;
+      padding-left: 40px;
+      padding-top: 30px;
+      margin-left: 200px;
+      font-size: 20px;
+      
+     }
+    a {
+      text-decoration: none;
+    }
+    a:hover {
+      color: brown;
+       text-decoration: underline;
+      text-decoration-color:brown ;
+      font-family: 'Times New Roman', Times, serif;
+    }
+     #newrelease{
+     padding-left: 20px; 
+     padding-top: 20px;
+     }
+  </style>
+  <body>
+    <h1>Movies</h1>
+    <div>
+       <a href="#newrelease" id="a4">New Releases</a>
+       <a href="#actor" id="a1">Actor</a>
+      <a href="#actress" id="a2">Actress</a>
+      <a href="#Directors" id="a3">Directors</a>
+     
+    </div>
+    
+    <div>
+      <h2 id="newrelease" >New Releases</h2>
+
+      <a href="../movies/raayan.html"><img src="../img/new release/raayan.jpg" alt="raayan" /></a>
+      <a href="../movies/thangalaan.html"><img src="../img/new release/thangalan.jpg" alt="" /></a>
+      <a href="../movies/maharaja.html"><img src="../img/new release/maharaja.jpg" alt="" /></a>
+      <a href="../movies/indian2.html"><img src="../img/new release/indian 2.jpg" alt="" /></a>
+      <a href="../movies/garudan.html"><img src="../img/new release/garudan.jpg" alt="" /></a>
+    </div>
+    
+    <div>
+      
+      <h2 id="actor">Actor</h2>
+      <a href="../movies/moviedhanush.html"><img src="../img/actor/dhanush.jpg" alt="" /></a>
+      <a href="../movies/movievijay.html"><img src="../img/actor/vijay.jpg" alt="" /></a>
+      <a href="../movies/movieajith.html"><img src="../img/actor/ajith.jpg" alt="" /></a>
+      <a href="../movies/moviesurya.html"><img src="../img/actor/surya.jpg" alt="" /></a>
+      <a href="../movies/movievijaysethupathy.html"><img src="../img/actor/vijaysethupathy.jpg" alt="" /></a>
+    </div>
+    <div>
+      <h2 id="actress">Actress</h2>
+      <a href="../movies/samantha.html"><img src="../img/Actress/sam.jpg" alt="" /></a>
+      <a href="../movies/megaakash.html"><img src="../img/Actress/mega akash.jpg" alt="" /></a>
+      <a href="../movies/trisha.html"><img src="../img/Actress/trisha.jpg" alt="" /></a>
+      <a href="../movies/nayanthra.html"><img src="../img/Actress/nayanthara.jpg" alt="" /></a>
+      <a href="../movies/shriya.html"><img src="../img/Actress/shriya.jpg" alt="" /></a>
+    </div>
+    <div>
+      <h2 id="Directors">Directors</h2>
+      <a href="../movies/Vetrimaaran.html"><img src="../img/director/vetrimaran.jpg" alt=""></a>
+      <a href="../movies/loki.html"><img src="../img/director/lokesh.jpg" alt=""></a>
+      
+      <a href="../movies/nelson.html"><img src="../img/director/nelson.jpg" alt=""></a>
+      <a href="../movies/sundarc.html"><img src="../img/director/sundar c.jpg" alt=""></a>
+      <a href="../movies/maniratnam.html"><img src="../img/director/mani ratnam.jpg" alt=""></a>
+    </div>
+    <script>
+      // Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+    </script>
+  </body>
+</html>

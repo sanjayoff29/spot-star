@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="../img/logo.png">
+    <title>OTP</title>
+    <style>
+        body {
+            background-image: url(../img/logo.png);
+            background-repeat: no-repeat;
+            background-color: black;
+            background-size: 200px 200px;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            background-color: whitesmoke;
+            padding: 40px;
+            margin: 100px auto; 
+            margin-top: 250px;/* Centered */
+            width: 90%;
+            max-width: 400px;
+            border-radius: 30px;
+        }
+        h2 {
+            text-align: center;
+            margin: 0 0 20px 0; /* Centered margin for h2 */
+        }
+        h3 {
+            text-align: center;
+            margin: 0 0 20px 0; /* Centered margin for h3 */
+        }
+        #inp1 {
+            width: 200px;
+            border-radius: 20px;
+            padding-left: 15px;
+            font-size: 15px;
+            margin: 0;
+            display: block;
+            margin: 0 auto 20px auto; /* Centered input field */
+        }
+        button {
+            width: 100px;
+            height: 40px;
+            border-radius: 20px;
+            margin: 0 auto;
+            display: block;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 700;
+        }
+        button:hover {
+            color: green;
+        }
+        button:active {
+            color: red;
+        }
+        /* Media Queries */
+        @media (max-width: 768px) {
+            div {
+                padding: 20px;
+                margin: 50px auto;
+                width: 90%;
+            }
+            #inp1 {
+                width: 200px;
+            }
+            button {
+                width: 80px;
+                height: 35px;
+            }
+        }
+        @media (max-width: 480px) {
+            div {
+                padding: 15px;
+                margin: 20px auto;
+                width: 90%;
+            }
+            #inp1 {
+                width: 200px;
+            }
+            button {
+                width: 70px;
+                height: 30px;
+            }
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>OTP</h2>
+        <h3>Enter your OTP</h3>
+        <input type="text" id="inp1">
+        <a href="../Home/password.html"><button>Verify</button></a>
+    </div>
+    <script>
+        document.querySelector("button").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default anchor behavior
+    const enteredOtp = document.getElementById("inp1").value;
+
+    // Retrieve the stored OTP from localStorage
+    const storedOtp = localStorage.getItem("generatedOTP");
+
+    if (enteredOtp === "") {
+        alert("Please enter the OTP.");
+        return;
+    }
+
+    // Check if the entered OTP matches the stored OTP
+    if (enteredOtp === storedOtp) {
+        alert("OTP verified successfully!");
+        window.location.href = "../Home/password.html"; // Redirect to password page
+    } else {
+        alert("Invalid OTP. Please try again.");
+    }
+});
+
+    </script>
+</body>
+</html>
